@@ -1,0 +1,539 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import url("https://fonts.googleapis.com/css?family=Signika");
+  @import url("https://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css");
+  @import url("https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+html {
+  font-family: 'Signika', sans-serif;
+}
+
+body {
+  background: #DDD7D1;
+  color:#ddd;
+}
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #ff4a4a;
+}
+/*#jaein li img {*/
+/*  width:200px;*/
+/*  height:250px;*/
+/*  margin:17px;*/
+/*}*/
+#introduce{
+  display:block;
+}
+#schedule-top{
+  margin-top:800px;
+}
+#schedule img{
+  width: 1000px;
+}
+#lion_icon{
+  display:block;
+  margin:50px 0px 100px 0px;
+  padding-top:100px;
+}
+
+#lion_icon img{
+  width: 160px;
+  height: 160px;
+  margin:0px;
+}
+#lion_icon h2{
+    font-size:60px;
+    margin:0px;
+}
+
+/*인물소개 start */
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 250px;
+  margin: 20px 1em 1em 20px;
+  position: relative;
+  width: 200px;
+}
+ul.img-list li img{
+  width:200px;
+  height:250px;
+}
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size:20px;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 250px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+/*인물소개 end*/
+#start{
+  position:relative;
+  top:-400px;
+}
+#people{
+  display:block;
+  /*padding-top:100px;*/
+}
+#email{
+  display:block;
+  margin:50px 0px 300px 0px;
+}
+#map {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  width: 100%;
+  /*height: 2000px;*/
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/52524/NewYork2_bg.png");
+}
+
+.notPlacemarked {
+  visibility: hidden;
+}
+
+.placemarked {
+  visibility: visible;
+  height: 55px;
+  width: 55px;
+  position: relative;
+  top: 110px;
+  margin-left: 40%;
+  z-index: 100;
+  transition: width 1s, height 1s, transform 1s;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+}
+
+.container {
+  position: absolute;
+  display: block;
+  width: 100%!important;
+  /*height: 5000px;*/
+  color: white;
+  text-align: center;
+  min-width: 24px;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  
+}
+
+.section {
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+
+#sect1 {
+  top: 1200px;
+}
+#sect2 {
+  top: 1800px;
+}
+#sect3 {
+  top: 4000px;
+}
+#footer {
+  top: 3600px;
+  height: 50px;
+  text-align: center;
+}
+#twitter {
+  float: left;
+  width: 20%;
+  font-size: 5em;
+  padding-left: 15%;
+}
+#rocket {
+  float: right;
+  width: 20%;
+  font-size: 5em;
+  padding-left: 15%;
+}
+
+#hiddenIcon {
+  text-align: center;
+  visibility: hidden;
+  height: 0;
+  font-size: 5em;
+}
+
+.anchor {
+  height: 100px;
+}
+
+band2 h2 {
+  text-align: left;
+}
+
+.explanation {
+  min-width: 12.42em;
+  float: left;
+  width: 40%;
+}
+
+.explanation-right {
+  min-width: 12.42em;
+  float: left;
+  text-align: right;
+  padding-left: 5%;
+  width: 40%;
+}
+
+#phone {
+  background: #DDD7D1;
+  border-radius: 30px;
+  box-shadow: 0 0.5em 0 #BCB1A5;
+  padding: 50px 18px 50px 18px;
+  width: 20%;
+  min-width: 200px;
+  max-width: 400px;
+  margin-right: 5%;
+  float: left;
+}
+
+#screen {
+  background: #ffffff;
+  height: 300px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  min-width: 200px;
+}
+
+#topBar {
+  background: #00C993;
+  height: 10%;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  min-width: 100px;
+}
+
+#mc_embed_signup {
+  text-align: right;
+  background-color: #00C993;
+}
+
+#mce-EMAIL {
+  text-align: right;
+  width: auto;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-right: 1em;
+  border-style: none;
+  outline: none;
+}
+
+#mce-EMAIL:focus {
+  outline: none;
+}
+
+#mc-embedded-subscribe {
+  border-style: none;
+}
+
+.icon-bookmark {
+  float: right;
+}
+
+.icon-bookmark:hover {
+  color: #FFC52F;
+}
+
+.pressed {
+  color: #FFC52F;
+}
+
+h1, h3 {
+  font-family: 'Signika', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 5em;
+  line-height: 1em;
+  /*margin-bottom: 1em;*/
+}
+
+a {
+  color: white;
+}
+
+.button {
+  background: #DDD7D1;
+  text-align: center;
+  padding: .5em 1em;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0.2em 0 #BCB1A5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  /*transition cross-browser stuff*/
+  -webkit-transition: background 0.2s ease-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: background 0.2s ease-out;
+  /* Firefox 4-15 */
+  -o-transition: background 0.2s ease-out;
+  /* Opera 10.5–12.00 */
+  transition: background 0.2s ease-out;
+  /* Firefox 16+, Opera 12.50+ */
+}
+
+.button:hover {
+  background: #BCB1A5;
+}
+
+a.arrow {
+  display:block;
+  margin:50px 0px 100px 0px;
+  color: white;
+  text-align: center;
+  font-size: 6em;
+  text-decoration: none;
+  padding-bottom: 30px;
+  /*transition cross-browser stuff*/
+  -webkit-transition: color 0.2s ease-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: color 0.2s ease-out;
+  /* Firefox 4-15 */
+  -o-transition: color 0.2s ease-out;
+  /* Opera 10.5–12.00 */
+  transition: color 0.2s ease-out;
+  /* Firefox 16+, Opera 12.50+ */
+}
+
+a.arrow:hover {
+  color: #FFC52F;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 1.125em;
+    /* 18px / 16px */
+  }
+
+  .container {
+    background-size: 100%;
+  }
+
+  .container h1 {
+    font-size: 3.25em;
+    /*52 / 16*/
+  }
+
+  a.button {
+    padding: .75em 1.5em;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .explanation {
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+
+  .explanation-right {
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+
+  #sect1 {
+    top: 350px;
+  }
+
+  #phone {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #map {
+    width: 0px;
+    height: 0px;
+  }
+
+ #sect2 {
+    top: 900px;
+  }
+
+  #rocket {
+    visibility: hidden;
+  }
+
+  #twitter {
+    visibility: hidden;
+    padding-left: 0em;
+  }
+
+  #hiddenIcon {
+    visibility: visible;
+    height: auto;
+  }
+
+  #mce-EMAIL {
+    text-align: center;
+    padding: 0;
+    float: none;
+  }
+
+  #mc_embed_signup {
+    text-align: center;
+  }
+}
+
+/*********tab**********/
+.tab, #tab0, #tab1, #tab2, #tab3, #tab4 {
+  height: 600px;
+  position: absolute;
+  /*box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.3);*/
+  transition: all 0.5s ease;
+}
+.tab:hover ~ div, #tab0:hover ~ div, #tab1:hover ~ div, #tab2:hover ~ div, #tab3:hover ~ 
+
+div, #tab4:hover ~ div {
+  transform: translateX(-80vw);
+}
+
+#tab0 {
+  width: 100%;
+  background: rgba(0,0,0,0);
+}
+
+#tab1 {
+  width: 95vw;
+  background: #31152B;
+}
+#tab1::after {
+  content: '';
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #31152B;
+  border-radius: 0 20px 20px 0;
+  top: 75%;
+  right: -4vw;
+}
+
+#tab2 {
+  width: 90vw;
+  background: #723147;
+}
+#tab2::after {
+  content: '';
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #723147;
+  border-radius: 0 20px 20px 0;
+  top: 50%;
+  right: -4vw;
+}
+
+#tab3 {
+  width: 95%;
+  background: #FF8100;
+}
+#tab3::after {
+  content: '언어소개';
+  font-weight:800;
+  font-size: 25px;
+  padding: 25px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #FF8100;
+  border-radius: 0 20px 20px 0;
+  top: 25vh;
+  right: -4vw;
+}
+
+#tab4 {
+  width: 95%;
+  background: #F7B14E;
+}
+#tab4::after {
+  content: '활동소개';
+  font-weight:800;
+  font-size: 25px;
+  padding: 25px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #F7B14E;
+  border-radius: 0 20px 20px 0;
+  top: 0;
+  right: -4vw;
+}
+
+#email_button:hover{
+  border:1px solid #eee;
+  color:rgb(0, 173, 255)!important;
+  background-color:#fff;
+  font-weight:900;
+}
+#email_button{
+  background-color:rgba(255,255,255,0);
+  border:1px solid #eee;
+  font-weight:900;
+}
+/*이메일 내용부분 크기 조정 불가하게*/
+textarea {
+  resize:none;
+}
+
+.developer,.copyright{
+   font-size:13px;
+   margin-top:0px!important;
+}
+
+.Group_name{
+   margin-bottom:15px;
+   font-weight:900;
+   font-size:25px;
+}
