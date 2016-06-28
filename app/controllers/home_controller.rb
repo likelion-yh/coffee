@@ -10,16 +10,16 @@ class HomeController < ApplicationController
     @title = params[:title_name_yh]
     @content = params[:content_name_yh]
   
-     mg_client = Mailgun::Client.new("key-3a2b300ef3f2c97d35cc2d721282da42")
+     mg_client = Mailgun::Client.new("key-secret")
     
     message_params =  {
                        from: @email,
-                       to:   'buddhasheep@gmail.com',
+                       to:   'example@gmail.com',
                        subject: @title,
                        text:    @content
                       }
     
-    result = mg_client.send_message('sandbox0073e4d78090430b9d67139acd12add9.mailgun.org', message_params).to_h!
+    result = mg_client.send_message('seret', message_params).to_h!
     
     message_id = result['id']
     message = result['message']
